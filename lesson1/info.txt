@@ -1,5 +1,7 @@
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate [ubuntu]
+
+
 pip install django
 django-admin startproject mysite .
 python manage.py migrate

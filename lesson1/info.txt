@@ -6,3 +6,16 @@ pip install django
 django-admin startproject mysite .
 python manage.py migrate
 python manage.py runserver
+
+1) создать приложение calculator
+    [командная строка]
+    python manage.py startapp calculator
+2) добавить приложение в mysite->settings.py -> INSTALLED_APPS
+3) создать файла ursl.py calculator->urls.py
+4) скопировать содержимое из mysite->urls.py в calculator->urls.py и удалить некоторые вещи
+5) создать путь в mysite->urls.py (calculator/) который ведет в файл calculator -> urls.py
+6) в calculator views.py->создать метод plusView()
+2)
+/calculate/minus/3/4 -> -1
+/calculate/plus/3/4 -> 7
+/calculate/

@@ -1,8 +1,29 @@
+командная строка[terminal]
+1) создание виртуальной среды
 python -m venv venv
 
+2)
 [windows]
 venv\scripts\activate
-[ubuntu]
+[ubuntu/mac]
 source venv/bin/activate
 
+3)
 pip install django
+
+4) ядро нашего сайта
+django-admin startproject mysite .
+
+5) установить начальные настройки
+python manage.py migrate
+
+6) запустить сайт
+python manage.py runserver
+
+mysite
+manage.py
+
+routes->paths->urls.py
+
+setdata.kz/ -> (/)-> index.html
+setdata.kz/about -> (/about)-> about.html

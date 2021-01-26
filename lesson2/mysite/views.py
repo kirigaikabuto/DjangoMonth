@@ -2,11 +2,20 @@ from django.shortcuts import render
 
 
 def indexPage(request):
-    return render(request, "temp/index.html")
+    name = "Hello from index Page"
+    d = {
+        "name": name,
+    }
+    return render(request, "temp/index.html", context=d)
 
 
 def aboutPage(request):
-    return render(request, "temp/about.html")
+    someData = "some data from about page"
+    d = {
+        "data": someData,
+        "age": 15,
+    }
+    return render(request, "temp/about.html", context=d)
 
 
 def contactsPage(request):

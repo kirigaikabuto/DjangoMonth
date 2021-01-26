@@ -7,3 +7,7 @@ def indexPage(request):
 
 def aboutPage(request):
     return render(request, "temp/about.html")
+
+
+def contactsPage(request):
+    return render(request, "temp/contacts.html")

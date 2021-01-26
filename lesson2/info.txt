@@ -27,3 +27,6 @@ routes->paths->urls.py
 
 setdata.kz/ -> (/)-> index.html
 setdata.kz/about -> (/about)-> about.html
+
+
+{% url 'path_name' %}

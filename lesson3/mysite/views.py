@@ -27,11 +27,12 @@ def homePage(request):
         "first_name": name,
         "last_name": lastName,
         "number": number,
+        "users": users,
     }
     return render(request, "frontend/index.html", context=d)
 
 
-def formAction(request):
+def loginAction(request):
     username = request.POST["username"]
     password = request.POST['pass']
     isExist = False
@@ -47,3 +48,11 @@ def formAction(request):
         return render(request, "frontend/profile.html", context=d)
 
     return HttpResponse(message)
+
+
+def loginPage(request):
+    return render(request, "frontend/login.html")
+
+
+def registerPage(request):
+    return render(request, "frontend/register.html")

@@ -12,7 +12,10 @@
 
 <form action="{% url 'form_action'%}" method="post">
     {%csrf_token%}
-    <input type="text" name="username">
+    <p>Username:<input type="text" name="username"></p>
+    <br>
+    <p>Password:<input type="password" name="pass"></p>
+    <br>
     <input type="submit" value="Send">
 </form>
 </body>

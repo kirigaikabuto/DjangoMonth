@@ -35,6 +35,10 @@ def homePage(request):
 def loginAction(request):
     username = request.POST["username"]
     password = request.POST['pass']
+    if len(username) == 0:
+        return HttpResponse("Please write your username")
+    if len(password) == 0:
+        return HttpResponse("Please write your password")
     isExist = False
     d = {}
     for i in users:
@@ -56,3 +60,5 @@ def loginPage(request):
 
 def registerPage(request):
     return render(request, "frontend/register.html")
+
+#view for registerAction

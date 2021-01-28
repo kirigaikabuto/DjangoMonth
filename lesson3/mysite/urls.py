@@ -11,5 +11,5 @@ urlpatterns = [
     path("loginPage/", loginPage, name="login_page"),
 
     path("registerPage/", registerPage, name="register_page"),
-    # registerAction
+    #registerAction/
 ]

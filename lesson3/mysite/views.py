@@ -5,10 +5,16 @@ users = [
     {
         "username": "yerassyl",
         "password": "passanya99",
+        "first_name": "yerassyl",
+        "last_name": "tleugazy",
+        "age": 22,
     },
     {
         "username": "kirito",
         "password": "732110",
+        "first_name": "kirigai",
+        "last_name": "kabuto",
+        "age": 16
     },
 ]
 
@@ -29,12 +35,15 @@ def formAction(request):
     username = request.POST["username"]
     password = request.POST['pass']
     isExist = False
+    d = {}
     for i in users:
         if i["username"] == username and i["password"] == password:
             isExist = True
+            d = i
+            break
 
     message = "Incorrect username and password"
     if isExist:
-        message = "Welcome to this page"
+        return render(request, "frontend/profile.html", context=d)
 
     return HttpResponse(message)

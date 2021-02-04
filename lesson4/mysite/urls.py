@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import homePage, loginAction, loginPage, registerPage, registerAction
+from .views import homePage, loginAction, loginPage, registerPage, registerAction, productDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -12,4 +12,6 @@ urlpatterns = [
 
     path("registerPage/", registerPage, name="register_page"),
     path("registerAction/", registerAction, name="register_action"),
+
+    path("products/detail/<int:id>", productDetail, name="product_detail"),
 ]

@@ -12,5 +12,14 @@
 {#    <p>{{ i }}</p>#}
 {#    <br>#}
 {#{% endfor %}#}
+
+{% for i in products %}
+    <p>Название:{{ i.name }}</p>
+    <p>Цена:{{ i.price }}</p>
+    <a href="{% url 'product_detail' id=i.id %}">Подробнее</a>
+    <br>
+    <br>
+{% endfor %}
+
 </body>
 </html>

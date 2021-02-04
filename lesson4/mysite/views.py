@@ -49,6 +49,7 @@ def homePage(request):
         "last_name": lastName,
         "number": number,
         "users": users,
+        "products": products,
     }
     return render(request, "frontend/index.html", context=d)
 
@@ -99,4 +100,14 @@ def registerAction(request):
     users.append(d)
     return HttpResponse("OK")
 
-# view for registerAction
+
+def productDetail(request, id):
+    product = {}
+    for i in products:
+        if i["id"] == id:
+            product = i
+            break
+    d = {
+        "product": product,
+    }
+    return render(request, "frontend/detail.html", context=d)

@@ -61,4 +61,21 @@ def loginPage(request):
 def registerPage(request):
     return render(request, "frontend/register.html")
 
-#view for registerAction
+
+def registerAction(request):
+    username = request.POST["username"]
+    password = request.POST['pass']
+    first_name = request.POST["first_name"]
+    last_name = request.POST["last_name"]
+    age = int(request.POST["age"])
+    d = {
+        "username": username,
+        "password": password,
+        "first_name": first_name,
+        "last_name": last_name,
+        "age": age,
+    }
+    users.append(d)
+    return HttpResponse("OK")
+
+# view for registerAction

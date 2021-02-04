@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import homePage, loginAction, loginPage, registerPage
+from .views import homePage, loginAction, loginPage, registerPage, registerAction
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -11,5 +11,5 @@ urlpatterns = [
     path("loginPage/", loginPage, name="login_page"),
 
     path("registerPage/", registerPage, name="register_page"),
-    #registerAction/
+    path("registerAction/", registerAction, name="register_action"),
 ]

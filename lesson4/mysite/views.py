@@ -18,6 +18,27 @@ users = [
     },
 ]
 
+products = [
+    {
+        "id": 1,
+        "name": "product1",
+        "description": "it is good product1",
+        "price": 300,
+    },
+    {
+        "id": 2,
+        "name": "product2",
+        "description": "it is good product2",
+        "price": 400,
+    },
+    {
+        "id": 3,
+        "name": "product3",
+        "description": "it is good product3",
+        "price": 500,
+    },
+]
+
 
 def homePage(request):
     name = "Yerassyl"

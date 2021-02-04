@@ -5,17 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Hello it is django</h1>
-<h2>{{first_name}}</h2>
-<h3>{{last_name}}</h3>
-<h4>{{number}}</h4>
-
-<a href="{% url 'login_page'%}">Логин</a>
-<a href="{% url 'register_page'%}">Регистрация</a>
+<a href="{% url 'login_page' %}">Логин</a>
+<a href="{% url 'register_page' %}">Регистрация</a>
 <br>
-{% for i in users%}
-<p>{{i}}</p>
-<br>
-{%endfor%}
+{#{% for i in users %}#}
+{#    <p>{{ i }}</p>#}
+{#    <br>#}
+{#{% endfor %}#}
 </body>
 </html>

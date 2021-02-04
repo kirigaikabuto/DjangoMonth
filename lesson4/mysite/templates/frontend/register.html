@@ -10,5 +10,20 @@
 <body>
 <h1>Register Page</h1>
 
+<form action="{% url 'login_action' %}" method="post">
+    {% csrf_token %}
+    <p>Username:<input type="text" name="username"></p>
+    <br>
+    <p>Password:<input type="password" name="pass"></p>
+    <br>
+    <p>FirstName:<input type="text" name="first_name"></p>
+    <br>
+    <p>LastName:<input type="text" name="last_name"></p>
+    <br>
+    <p>Age:<input type="text" name="age"></p>
+    <br>
+    <input type="submit" value="Register">
+</form>
+
 </body>
 </html>

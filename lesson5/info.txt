@@ -3,3 +3,6 @@ python -m venv env
 source env/bin/activate
 [windows]
 env\scripts\activate
+django-admin startproject core .
+python manage.py migrate
+python manage.py runserver

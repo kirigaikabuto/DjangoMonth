@@ -6,3 +6,8 @@ env\scripts\activate
 django-admin startproject core .
 python manage.py migrate
 python manage.py runserver
+
+[users]
+[products]
+python manage.py startapp products
+

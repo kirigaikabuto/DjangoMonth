@@ -1,0 +1,7 @@
+model:
+book
+    name
+    description
+    author
+    price
+

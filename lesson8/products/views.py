@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Product
 
 
@@ -16,3 +16,17 @@ def get(request, id):
         "product": product,
     }
     return render(request, "products/get.html", context=d)
+
+
+def add_page(request):
+    return render(request, "products/add.html")
+
+
+def add_action(request):
+    name = request.POST["name"]
+    price = int(request.POST["price"])
+    description = request.POST["description"]
+    user = request.user
+    product = Product(author=user, name=name, price=price, description=description)
+    product.save()
+    return redirect("product_list")

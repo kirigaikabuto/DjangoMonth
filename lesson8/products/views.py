@@ -30,3 +30,9 @@ def add_action(request):
     product = Product(author=user, name=name, price=price, description=description)
     product.save()
     return redirect("product_list")
+
+
+def remove(request, id):
+    product = Product.objects.get(pk=id)
+    product.delete()
+    return redirect("product_list")

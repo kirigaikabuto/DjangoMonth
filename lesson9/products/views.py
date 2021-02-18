@@ -36,3 +36,11 @@ def remove(request, id):
     product = Product.objects.get(pk=id)
     product.delete()
     return redirect("product_list")
+
+
+def update_page(request, id):
+    product = Product.objects.get(pk=id)
+    d = {
+        "product": product,
+    }
+    return render(request, "products/update.html", context=d)

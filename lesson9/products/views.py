@@ -44,3 +44,16 @@ def update_page(request, id):
         "product": product,
     }
     return render(request, "products/update.html", context=d)
+
+
+def update_action(request):
+    id = int(request.POST["id"])
+    name = request.POST["name"]
+    price = int(request.POST["price"])
+    description = request.POST["description"]
+    product = Product.objects.get(pk=id)
+    product.name = name
+    product.price = price
+    product.description = description
+    product.save()
+    return redirect("product_list")

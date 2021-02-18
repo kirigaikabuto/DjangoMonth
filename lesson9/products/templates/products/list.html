@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>List of products</h1>
+<a href="{%url 'add_page' %}">Add Product</a>
+{%for i in products%}
+<p>{{i.pk}}</p>
+<p>{{i.name}}</p>
+<p>{{i.price}}</p>
+<a href="{%url 'product_get' id=i.pk%}">Подробнее</a>
+<br>
+{%endfor%}
+</body>
+</html>

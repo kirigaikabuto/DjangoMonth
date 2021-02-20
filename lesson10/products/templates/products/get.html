@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Name:{{ product.name }}</p>
+<p>Price:{{ product.price }}</p>
+<p>Description:{{ product.description }}</p>
+{% if user.is_authenticated %}
+    <a href="{% url 'remove' id=product.pk %}">Remove</a>
+    <a href="{% url 'update_page' id=product.pk %}">Edit</a>
+{% endif %}
+</body>
+</html>

@@ -8,6 +8,7 @@ class Product(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     price = models.IntegerField()
+    image = models.TextField(default="")
     created_date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):

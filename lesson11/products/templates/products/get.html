@@ -6,5 +6,6 @@
 {% if user.is_authenticated %}
     <a href="{% url 'remove' id=product.pk %}">Remove</a>
     <a href="{% url 'update_page' id=product.pk %}">Edit</a>
+    <a href="{% url 'make_order' id=product.pk %}">Order</a>
 {% endif %}
 {% endblock %}
